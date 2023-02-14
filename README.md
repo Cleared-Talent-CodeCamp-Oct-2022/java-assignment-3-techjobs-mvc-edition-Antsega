@@ -10,4 +10,13 @@ __Incorporates__:<br/>
 - MCV Pathing
 - Thymeleaf as index
 - Controller pathing<br/><br/>
-_initialized_ -- __10 Feb 2023__
+_initialized_ -- __10 Feb 2023__ <br/>
+_finalized_ -- __14 Feb 2023__
+<br/>
+<br/>
+__List of Jobs to Choose From__
+  ![ScreenShot](/Screenshot_2023-02-14_141642.jpg) <br>
+__Search Feature__
+  ![ScreenShot](/Screenshot_2023-02-14_142002.jpg) <br>
+__Search Results with Job Breakdown__
+  ![ScreenShot](/Screenshot_2023-02-14_142124.jpg) <br>
