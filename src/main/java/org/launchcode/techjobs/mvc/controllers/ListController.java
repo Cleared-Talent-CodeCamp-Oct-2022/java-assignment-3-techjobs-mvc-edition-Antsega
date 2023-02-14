@@ -69,12 +69,6 @@ public class ListController {
             model.addAttribute("selector" , columnChoices.get(column));
             model.addAttribute("value", value);
         }
-//        else {
-//            jobs = JobData.findByColumnAndValue(column, value);
-//            model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
-////            model.addAttribute("selector" , columnChoices.get(column));
-////            model.addAttribute("value", value);
-//        }
 
         model.addAttribute("jobs", jobs);
         model.addAttribute("skillsRow", skillsRow);

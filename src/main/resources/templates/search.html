@@ -36,7 +36,7 @@
 
     <hr />
 
-    <!-- TODO #4 - Loop over the search results to display all job fields. -->
+    <!-- DO #4 - Loop over the search results to display all job fields. -->
     <table th:each="eachJob : ${jobs}" class="job-listing">
         <tbody>
         <tr>
@@ -56,12 +56,12 @@
             <td th:text="${eachJob.location}"></td>
         </tr>
         <tr>
-            <th scope="row">ID</th>
-            <td th:text="${eachJob.getId()}"></td>
+            <th scope="row">Position Type</th>
+            <td th:text="${eachJob.getPositionType()}"></td>
         </tr>
         <tr>
-            <th scope="row">Position Type</th>
-            <td th:text="${eachJob.positionType}"></td>
+            <th scope="row">Skill</th>
+            <td th:text="${eachJob.getCoreCompetency()}"></td>
         </tr>
         <!--        If skills section selected, include skills row-->
         <tr th:if="${skillsRow}">
