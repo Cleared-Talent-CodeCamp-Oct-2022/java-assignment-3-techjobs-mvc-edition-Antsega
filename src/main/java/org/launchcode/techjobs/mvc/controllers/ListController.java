@@ -29,6 +29,7 @@ public class ListController {
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Skill");
 
+        tableChoices.put("all", "All");
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
@@ -49,15 +50,28 @@ public class ListController {
 
     @GetMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model, @RequestParam String column, @RequestParam(required = false) String value) {
-        ArrayList<Job> jobs;
+        ArrayList<Job> jobs = null;
+        Boolean skillsRow = false;
+
+        jobs = JobData.findByColumnAndValue(column, value);
+        model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
+
         if (column.equals("all")){
             jobs = JobData.findAll();
-            model.addAttribute("title", "All Jobs");
-        } else {
+            model.addAttribute("title", "Jobs with Something else " + columnChoices.get(column) + ": " + value);
+
+        }
+        if (column.equals("coreCompetency")) {
             jobs = JobData.findByColumnAndValue(column, value);
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
+            // includes skills <tr>
+            skillsRow = true;
+            model.addAttribute("selector" , columnChoices.get(column));
+            model.addAttribute("value", value);
         }
+
         model.addAttribute("jobs", jobs);
+        model.addAttribute("skillsRow", skillsRow);
 
         return "list-jobs";
     }
