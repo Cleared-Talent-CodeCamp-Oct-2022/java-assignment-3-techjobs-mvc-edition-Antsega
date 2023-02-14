@@ -15,8 +15,9 @@ _finalized_ -- __14 Feb 2023__
 <br/>
 <br/>
 
+__List of Jobs to Choose From__ <br/>
   ![Screenshot](/Screenshot_2023-02-14_141642.jpg) <br/>
-
+__Search Feature__<br/>
   ![Screenshot](/Screenshot_2023-02-14_142002.jpg) <br/>
-
+__Search Results with Job Breakdown__<br/>
   ![Screenshot](/Screenshot_2023-02-14_142124.jpg) <br/>
